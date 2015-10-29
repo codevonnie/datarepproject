@@ -2,18 +2,27 @@
 
 # Project title
 ## Data Representation and Querying Project 2015
-### Student Name
+### Yvonne Grealy
 
 ## Introduction
-This project provides the design and documentation for the dataset "Dataset title" which is available at [data.gov.ie](http://data.gov.ie)...
+This project provides the design and documentation for the dataset "Disabled Parking Spaces" which is available at [data.gov.ie](https://data.gov.ie/dataset/disabled-parking-spaces).  
 
 ## About the data
-This dataset was received in Comma Separated Values (CSV) format, and was downloaded from [*insert page name*](insert url).
-The CSV file contains 1001 rows, the first being a header row with the names of each field.
-There are six values on each line, which are as follows:
-    - **year**: the year that the car was purchased.
-    - **price**: the price of the car.
-    ...
+This dataset was received in Comma Separated Values (CSV) format, and was downloaded from [data.gov.ie](https://data.gov.ie/dataset/disabled-parking-spaces).
+The CSV file contains 1187 rows, the first being a header row with the names of each field.
+There are twelve values on each line, which are as follows:
+    - **id**: the unique id of the specific entry.
+    - **Area_Desc**: a basic description of the area.
+    - **ROADNAME**: the name of the street.
+    - **Area**: currently blank column.
+    - **TOTAL_SPACES**: the number of disabled spaces in given area.
+    - **DIPPED_FOOTPATH**: true if the footpath nearby is dipped for access by people with wheelchairs.
+    - **PARK_SIGN**: true if there is a sign indicating the parking space.
+    - **ROAD_MARKING**: true if there is a road marking indicating the parking space.
+    - **OCCUPIED**: true if the space is currently occupied.
+    - **Adjacent_Services**: what services are in the immediate locale.
+    - **LAT**: the latitude co-ordinates of the space.
+     - **LONG**: the longtitude co-ordinates of the space.
     
     ## List of cars for a given year
 You can get a list of cars purchased in a given year using the GET method at the following URL:
