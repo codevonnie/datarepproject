@@ -1,7 +1,5 @@
-# datarepproject
-
-# Project title
-## Data Representation and Querying Project 2015
+# Data Representation and Querying Project 2015
+## Disabled Parking Spaces Dataset
 ### Yvonne Grealy
 
 ## Introduction
@@ -29,8 +27,8 @@ There are twelve values on each line, which are as follows:
 - **LAT**: the latitude co-ordinates of the space.
 - **LONG**: the longtitude co-ordinates of the space.
 
-## List of spaces in a given street
-You can get a list of spaces located in a given year using the GET method at the following URL:
+#### List of spaces in a given street
+You can get a list of spaces located in a given street using the GET method at the following URL:
 *http://spacessapi.com/roadname/[roadname]*
 where you replace [roadname] with the required road name.
 For example, the URL:
@@ -65,9 +63,9 @@ An example of a response would be:
   }
 ```
 
-## List of spaces close to a given service
+#### List of spaces close to a given service
  
-You can get a list of spaces located in a given year using the GET method at the following URL:
+You can get a list of spaces located near a specified service using the GET method at the following URL:
 *http://spacessapi.com/services/[services]*
 where you replace [service] with the requested service.
 For example, the URL:
@@ -86,6 +84,43 @@ The data will be returned in JSON format, with the following properties for each
 - **LAT**: the latitude co-ordinates of the space.
 - **LONG**: the longtitude co-ordinates of the space.
 
+An example of a response would be:
+```json    
+{
+    "Adjacent_Services":"Hairdressers",
+    "AREA_DESC":"Chapel Street",
+    "ROADNAME":"Chapel Street",
+    "TOTAL_SPACES":2,
+    "DIPPED_FOOTPATH":"TRUE",
+    "PARK_SIGN":"TRUE",
+    "ROAD_MARKING":"TRUE",
+    "LAT":53.61029459,
+    "LONG":-6.186854504
+  }
+```
+#### List of spaces close to a users current location
+
+*This query may require extra information for use with GPS.*
+ 
+You can get a list of spaces located near the users current location using the GET method at the following URL:
+*http://spacessapi.com/location/[location]*
+where the [location] is replaced with the current location.
+This would work where the URL would contain the returned longtitude and latitude of the current location and compare it to results in the dataset and then return a list of disabled parking spaces near to the specified location.  This could be used in conjunction with GPS mapping.
+
+The data will be returned in JSON format, with the following properties for each space:
+
+- **Adjacent_Services**: what services are in the immediate locale.
+- **ROADNAME**: the name of the street.
+- **Area_Desc**: a basic description of the area.
+- **TOTAL_SPACES**: the number of disabled spaces in given area.
+- **DIPPED_FOOTPATH**: true if the footpath nearby is dipped for access by people with wheelchairs.
+- **PARK_SIGN**: true if there is a sign indicating the parking space.
+- **ROAD_MARKING**: true if there is a road marking indicating the parking space.
+- **OCCUPIED**: true if the space is currently occupied.
+- **LAT**: the latitude co-ordinates of the space.
+- **LONG**: the longtitude co-ordinates of the space.
+
+An example of a response would be:
 ```json    
 {
     "Adjacent_Services":"Hairdressers",
