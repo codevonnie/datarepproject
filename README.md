@@ -134,3 +134,4 @@ An example of a response would be:
     "LONG":-6.186854504
   }
 ```
+This query could be further enhanced if the Occupied field of the dataset was in the future implemented by the county council so that users would be able to not only find disabled parking near their current location but also spaces that are currently unoccupied.
