@@ -16,20 +16,20 @@ This dataset was received in Comma Separated Values (CSV) format, and was downlo
 The CSV file contains 1187 rows, the first being a header row with the names of each field.
 There are twelve values on each line, which are as follows:
 
-    - **id**: the unique id of the specific entry.
-    - **Area_Desc**: a basic description of the area.
-    - **ROADNAME**: the name of the street.
-    - **Area**: currently blank column.
-    - **TOTAL_SPACES**: the number of disabled spaces in given area.
-    - **DIPPED_FOOTPATH**: true if the footpath nearby is dipped for access by people with wheelchairs.
-    - **PARK_SIGN**: true if there is a sign indicating the parking space.
-    - **ROAD_MARKING**: true if there is a road marking indicating the parking space.
-    - **OCCUPIED**: true if the space is currently occupied.
-    - **Adjacent_Services**: what services are in the immediate locale.
-    - **LAT**: the latitude co-ordinates of the space.
-     - **LONG**: the longtitude co-ordinates of the space.
-     
-    ## List of spaces in a given street
+- __id__: the unique id of the specific entry.
+- **Area_Desc**: a basic description of the area.
+- **ROADNAME**: the name of the street.
+- **Area**: currently blank column.
+- **TOTAL_SPACES**: the number of disabled spaces in given area.
+- **DIPPED_FOOTPATH**: true if the footpath nearby is dipped for access by people with wheelchairs.
+- **PARK_SIGN**: true if there is a sign indicating the parking space.
+- **ROAD_MARKING**: true if there is a road marking indicating the parking space.
+- **OCCUPIED**: true if the space is currently occupied.
+- **Adjacent_Services**: what services are in the immediate locale.
+- **LAT**: the latitude co-ordinates of the space.
+- **LONG**: the longtitude co-ordinates of the space.
+
+## List of spaces in a given street
 You can get a list of spaces located in a given year using the GET method at the following URL:
 *http://spacessapi.com/roadname/[roadname]*
 where you replace [roadname] with the required road name.
@@ -55,8 +55,8 @@ An example of a response would be:
     "ROADNAME":"Howth Road",
     "AREA_DESC":"St Marys Church",
     "TOTAL_SPACES":2,
-    "DIPPED_FOOTPATH":null,
-    "PARK_SIGN":TRUE,
+    "DIPPED_FOOTPATH":"TRUE",
+    "PARK_SIGN":"TRUE",
     "ROAD_MARKING":"No",
     "OCCUPIED":"No",
     "Adjacent_Services":"Church",
@@ -65,7 +65,8 @@ An example of a response would be:
   }
 ```
 
- ## List of spaces close to a given service
+## List of spaces close to a given service
+ 
 You can get a list of spaces located in a given year using the GET method at the following URL:
 *http://spacessapi.com/services/[services]*
 where you replace [service] with the requested service.
@@ -91,8 +92,8 @@ The data will be returned in JSON format, with the following properties for each
     "AREA_DESC":"Chapel Street",
     "ROADNAME":"Chapel Street",
     "TOTAL_SPACES":2,
-    "DIPPED_FOOTPATH":TRUE,
-    "PARK_SIGN"TRUE: ,
+    "DIPPED_FOOTPATH":"TRUE",
+    "PARK_SIGN":"TRUE",
     "ROAD_MARKING":"TRUE",
     "LAT":53.61029459,
     "LONG":-6.186854504
