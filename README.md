@@ -5,7 +5,7 @@
 ## Introduction
 This project provides the design and documentation for the dataset "Disabled Parking Spaces" which is available at [data.gov.ie](https://data.gov.ie/dataset/disabled-parking-spaces).  
 
-The use of this dataset is to provide information to people who require disabled parking. The idea would be to make use of this information through an app which could provide up-to-date information regarding the exact location of spaces, nearby facilities and other pertinant information such as the marking of such spaces.  The original dataset is provided by Fingal County Council but the view would be that similar information would be held by other county councils around the country.  
+The use of this dataset is to provide information to people who require disabled parking. The idea would be to make use of this information through an app which could provide up-to-date information regarding the exact location of spaces, nearby facilities and other pertinant information such as the marking of such spaces and whether there are dipped footpaths for users that use wheelchairs or walking aids.  The original dataset is provided by Fingal County Council but the view would be that similar information would be held by other county councils around the country.  
 
 This dataset also contains a value called "Occupied" which could have a future idea of providing realtime information regarding whether a parking space is occupied at the time of a request. 
 
@@ -102,9 +102,9 @@ An example of a response would be:
 
 *This query may require extra information for use with GPS.*
  
-You can get a list of spaces located near the users current location using the GET method at the following URL:
+You can get a list of spaces located near the users current location using the POST method at the following URL:
 *http://spacessapi.com/location/[location]*
-where the [location] is replaced with the current location.
+where the [location] is replaced with the users current location.
 This would work where the URL would contain the returned longtitude and latitude of the current location and compare it to results in the dataset and then return a list of disabled parking spaces near to the specified location.  This could be used in conjunction with GPS mapping.
 
 The data will be returned in JSON format, with the following properties for each space:
