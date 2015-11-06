@@ -109,6 +109,8 @@ This would work where the URL would contain the returned longtitude and latitude
 
 The data will be returned in JSON format, with the following properties for each space:
 
+- **LAT**: the latitude co-ordinates of the space.
+- **LONG**: the longtitude co-ordinates of the space.
 - **Adjacent_Services**: what services are in the immediate locale.
 - **ROADNAME**: the name of the street.
 - **Area_Desc**: a basic description of the area.
@@ -117,12 +119,12 @@ The data will be returned in JSON format, with the following properties for each
 - **PARK_SIGN**: true if there is a sign indicating the parking space.
 - **ROAD_MARKING**: true if there is a road marking indicating the parking space.
 - **OCCUPIED**: true if the space is currently occupied.
-- **LAT**: the latitude co-ordinates of the space.
-- **LONG**: the longtitude co-ordinates of the space.
 
 An example of a response would be:
 ```json    
 {
+    "LAT":53.61029459,
+    "LONG":-6.186854504
     "Adjacent_Services":"Hairdressers",
     "AREA_DESC":"Chapel Street",
     "ROADNAME":"Chapel Street",
@@ -130,8 +132,6 @@ An example of a response would be:
     "DIPPED_FOOTPATH":"TRUE",
     "PARK_SIGN":"TRUE",
     "ROAD_MARKING":"TRUE",
-    "LAT":53.61029459,
-    "LONG":-6.186854504
   }
 ```
 This query could be further enhanced if the Occupied field of the dataset was in the future implemented by the county council so that users would be able to not only find disabled parking near their current location but also spaces that are currently unoccupied.
