@@ -135,3 +135,9 @@ An example of a response would be:
   }
 ```
 This query could be further enhanced if the Occupied field of the dataset was in the future implemented by the county council so that users would be able to not only find disabled parking near their current location but also spaces that are currently unoccupied.
+
+##Closing Statement
+
+The use of this api is to provide information to users who require disabled parking including groups that may work with people with disabilities.  There is a wealth of data provided in the dataset that can be used to create useful, practical information to users.  Some of the data is such that will require minimum manipulation but will provide helpful information such as the information given from roadnames and nearby services.  Other data such as the location coordinates can be used to give exact locations and used with other api's could provide the data in map form.  
+
+There is also potential for future growth within the dataset with the inclusion of the Occupied field which could be used to provide up-to-date, realtime information on the current availability of the space.  The dataset is provided by Fingal County Council but it is possible that other County Councils may also have similar data or would be interested in gathering similar data which could result in a countrywide dataset.
