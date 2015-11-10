@@ -124,8 +124,8 @@ An example of a response would be:
 ```json    
 {
     "LAT":53.61029459,
-    "LONG":-6.186854504
-    "Adjacent_Services" : "Hairdressers",
+    "LONG":-6.186854504,
+    "Adjacent_Services":"Hairdressers",
     "AREA_DESC":"Chapel Street",
     "ROADNAME":"Chapel Street",
     "TOTAL_SPACES":2,
